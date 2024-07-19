@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dettagli Utente</title>
+</head>
+<body>
+    <h2>Dettagli Utente</h2>
+    <p><strong>Nome:</strong> <span th:text="${user.nome}"></span></p>
+    <p><strong>Cognome:</strong> <span th:text="${user.cognome}"></span></p>
+    <p><strong>Data di Nascita:</strong> <span th:text="${user.dataNascita}"></span></p>
+    <p><strong>Città:</strong> <span th:text="${user.citta}"></span></p>
+    <a href="/user">Torna all'elenco utenti</a>
+</body>
+</html>

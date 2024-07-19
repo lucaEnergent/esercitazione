@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Inserimento Dati</title>
+</head>
+<body>
+    <h1>Inserimento Dati</h1>
+    <form action="#" th:action="@{/form}" th:object="${user}" method="post">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" th:field="*{nome}" />
+        </div>
+        <div>
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome" th:field="*{cognome}" />
+        </div>
+        <div>
+            <label for="dataDiNascita">Data di Nascita:</label>
+            <input type="date" id="dataNascita" th:field="*{dataNascita}" />
+        </div>
+        <div>
+            <label for="citta">Città:</label>
+            <input type="text" id="citta" th:field="*{citta}" />
+        </div>
+        <div>
+            <button type="submit">Invia</button>
+        </div>
+    </form>
+</body>
+</html>
