@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.User;
+import com.example.demo.exception.UserNotFoundException;
 import com.example.demo.repository.UserRepository;
 
 @Service
@@ -15,7 +16,7 @@ public class UserService {
 	UserRepository repo;
 	
 	public User leggiUserById(Long id) {
-		User user = repo.findById(id).orElseThrow();
+		User user = repo.findById(id).orElseThrow(() -> new UserNotFoundException("User con ID " + id + " non trovato"));
 		
 		return user;
 	}
