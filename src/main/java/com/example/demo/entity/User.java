@@ -20,6 +20,14 @@ public class User {
 	    private String citta;
 	    
 	    public User() {}
+	    
+		public User(String nome, String cognome, LocalDate dataNascita, String citta) {
+			super();
+			this.nome = nome;
+			this.cognome = cognome;
+			this.dataNascita = dataNascita;
+			this.citta = citta;
+		}
 
 		public Long getId() {
 			return id;
